@@ -8,14 +8,38 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+protocol SettingsViewControllerDelegate {
+    func didUpdateSettings(withBaseRate baseRate: RateModel)
+}
 
+class SettingsViewController: UIViewController {
+    
+    var delegate: SettingsViewControllerDelegate?
+    @IBOutlet weak var currentCurrencyTextfield: UITextField!
+    @IBOutlet weak var valueTextfield: UITextField!
+    var baseRate = RateModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.currentCurrencyTextfield.text = baseRate.currency
+        self.valueTextfield.text = String().doubleString(baseRate.value)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        let rate = RateModel()
+        rate.currency = self.currentCurrencyTextfield.text!
+        rate.value = self.valueTextfield.text!.doubleValue()
+        
+        self.delegate?.didUpdateSettings(withBaseRate: rate)
+    }
+    
+    func setup(withBaseRate baseRate:RateModel) {
+        self.baseRate = baseRate
+    }
 
     /*
     // MARK: - Navigation

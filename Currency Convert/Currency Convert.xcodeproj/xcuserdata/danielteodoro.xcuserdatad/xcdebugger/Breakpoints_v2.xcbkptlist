@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Currency Convert/Controllers/CurrencyList/CurrencyListViewController.swift"
-            timestampString = "575056269.608663"
+            filePath = "Currency Convert/Controllers/CurrencyList/CurrencyListViewControllerBusiness.swift"
+            timestampString = "575067361.357057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -17,16 +17,20 @@ class CurrencyListViewControllerBusiness: NSObject {
     var currencyList: CurrencyListModel
     var delegate: CurrencyListViewControllerBusinessDelegate?
     var ratesArray: NSMutableArray
+    var baseRate: RateModel
     
     override init() {
         self.currencyList = CurrencyListModel.init()
         self.ratesArray = NSMutableArray()
+        baseRate = RateModel()
+        baseRate.currency = "CAD"
+        baseRate.value = 1
         super.init()
         self.fetchCurrencies()
     }
     
     func fetchCurrencies() {
-        CurrencyNetworking().getCurrencyList(for: "CAD", completion: {(result) in
+        CurrencyNetworking().getCurrencyList(for: self.baseRate.currency, completion: {(result) in
             switch result {
             case .success(let currencies):
                 self.currencyList = currencies
@@ -40,6 +44,7 @@ class CurrencyListViewControllerBusiness: NSObject {
     }
     
     private func startRatesArray(withCurrenciesList currenciesList: CurrencyListModel){
+        self.ratesArray.removeAllObjects()
         for rate in currenciesList.rates{
             self.ratesArray.add(RateModel.init(withKey:rate.key, andValue:rate.value))
         }
