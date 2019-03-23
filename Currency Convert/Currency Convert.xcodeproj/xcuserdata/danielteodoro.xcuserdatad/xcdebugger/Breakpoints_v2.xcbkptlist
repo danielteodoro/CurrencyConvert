@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currency Convert/Controllers/CurrencyList/CurrencyListViewControllerBusiness.swift"
-            timestampString = "575070016.081681"
+            timestampString = "575072330.684882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "init()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchCurrencies()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currency Convert/Networking/CurrencyNetworking.swift"
+            timestampString = "575072330.685285"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getCurrencyList(for:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

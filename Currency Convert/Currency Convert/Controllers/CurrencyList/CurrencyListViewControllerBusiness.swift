@@ -10,6 +10,7 @@ import UIKit
 
 protocol CurrencyListViewControllerBusinessDelegate: class {
     func didFetchCurrencies()
+    func errorFetchingCurrencies(_ errorMessage:String)
 }
 
 class CurrencyListViewControllerBusiness: NSObject {
@@ -38,6 +39,7 @@ class CurrencyListViewControllerBusiness: NSObject {
                 self.delegate?.didFetchCurrencies()
                 break
             case .failure( _):
+                self.delegate?.errorFetchingCurrencies("Currency not suported")
                 break
             }
         })

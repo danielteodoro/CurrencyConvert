@@ -36,6 +36,12 @@ class CurrencyListViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.reloadData()
     }
     
+    func errorFetchingCurrencies(_ errorMessage:String) {
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     //MARK: - SettingsDelegate
     func didUpdateSettings(withBaseRate rate: RateModel) {
         self.business.baseRate = rate
@@ -67,5 +73,5 @@ class CurrencyListViewController: UIViewController, UITableViewDelegate, UITable
             (segue.destination as! SettingsViewController).setup(withBaseRate: self.business.baseRate)
         }
     }
-
+    
 }

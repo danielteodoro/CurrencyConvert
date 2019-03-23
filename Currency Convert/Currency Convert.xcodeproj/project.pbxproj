@@ -23,6 +23,8 @@
 		BF923E062246A59300D0810E /* CurrencyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF923E042246A59300D0810E /* CurrencyListTableViewCell.xib */; };
 		BF923E092246ABF700D0810E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF923E082246ABF700D0810E /* SettingsViewController.swift */; };
 		BF923E0C2246B67C00D0810E /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF923E0B2246B67C00D0810E /* String+Helpers.swift */; };
+		BF923E0F2246E02300D0810E /* String+HelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF923E0E2246E02300D0810E /* String+HelpersTests.swift */; };
+		BF923E122246E20000D0810E /* CurrencyListViewControllerBusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF923E112246E20000D0810E /* CurrencyListViewControllerBusinessTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		BF923E042246A59300D0810E /* CurrencyListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyListTableViewCell.xib; sourceTree = "<group>"; };
 		BF923E082246ABF700D0810E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BF923E0B2246B67C00D0810E /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
+		BF923E0E2246E02300D0810E /* String+HelpersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HelpersTests.swift"; sourceTree = "<group>"; };
+		BF923E112246E20000D0810E /* CurrencyListViewControllerBusinessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewControllerBusinessTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				BF923DB9224681CC00D0810E /* Currency Convert */,
-				BF923E0A2246B66300D0810E /* Helpers */,
 				BF923DCE224681CE00D0810E /* Currency ConvertTests */,
 				BF923DD9224681CE00D0810E /* Currency ConvertUITests */,
 				BF923DB8224681CC00D0810E /* Products */,
@@ -125,6 +128,7 @@
 				BF923DED224686CF00D0810E /* Controllers */,
 				BF923DEF224686ED00D0810E /* Model */,
 				BF923DEE224686DB00D0810E /* Networking */,
+				BF923E0A2246B66300D0810E /* Helpers */,
 			);
 			path = "Currency Convert";
 			sourceTree = "<group>";
@@ -132,6 +136,8 @@
 		BF923DCE224681CE00D0810E /* Currency ConvertTests */ = {
 			isa = PBXGroup;
 			children = (
+				BF923E102246E1DB00D0810E /* CurrencyList */,
+				BF923E0D2246DFF800D0810E /* Helpers */,
 				BF923DCF224681CE00D0810E /* Currency_ConvertTests.swift */,
 				BF923DD1224681CE00D0810E /* Info.plist */,
 			);
@@ -206,6 +212,22 @@
 				BF923E0B2246B67C00D0810E /* String+Helpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BF923E0D2246DFF800D0810E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF923E0E2246E02300D0810E /* String+HelpersTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BF923E102246E1DB00D0810E /* CurrencyList */ = {
+			isa = PBXGroup;
+			children = (
+				BF923E112246E20000D0810E /* CurrencyListViewControllerBusinessTests.swift */,
+			);
+			path = CurrencyList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,7 +379,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF923E0F2246E02300D0810E /* String+HelpersTests.swift in Sources */,
 				BF923DD0224681CE00D0810E /* Currency_ConvertTests.swift in Sources */,
+				BF923E122246E20000D0810E /* CurrencyListViewControllerBusinessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
