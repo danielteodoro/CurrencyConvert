@@ -43,11 +43,18 @@ class CurrencyListViewControllerBusiness: NSObject {
         })
     }
     
-    private func startRatesArray(withCurrenciesList currenciesList: CurrencyListModel){
+    private func startRatesArray(withCurrenciesList currenciesList: CurrencyListModel) {
         self.ratesArray.removeAllObjects()
         for rate in currenciesList.rates{
             self.ratesArray.add(RateModel.init(withKey:rate.key, andValue:rate.value))
         }
+    }
+    
+    func currencyCell(_ cell: CurrencyListTableViewCell, forIndexPath indexPath: IndexPath) -> CurrencyListTableViewCell {
+        let rate = self.ratesArray[indexPath.row] as! RateModel
+        cell.currencyLabel.text = rate.currency
+        cell.currencyValueLabel.text = String().doubleString(rate.value * self.baseRate.value)
+        return cell
     }
     
 }

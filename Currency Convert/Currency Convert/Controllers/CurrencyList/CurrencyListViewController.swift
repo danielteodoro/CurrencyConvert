@@ -49,10 +49,8 @@ class CurrencyListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "currencyListCell", for: indexPath) as! CurrencyListTableViewCell
-        let rate = self.business.ratesArray[indexPath.row] as! RateModel
-        cell.currencyLabel.text = rate.currency
-        cell.currencyValueLabel.text = String().doubleString(rate.value * self.business.baseRate.value)
+        var cell = self.tableView.dequeueReusableCell(withIdentifier: "currencyListCell", for: indexPath) as! CurrencyListTableViewCell
+        cell = self.business.currencyCell(cell, forIndexPath: indexPath)
         
         return cell
     }

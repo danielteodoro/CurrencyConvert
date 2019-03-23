@@ -30,9 +30,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$000,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8E-ur-7mn">
-                        <rect key="frame" x="234" y="19.5" width="70" height="21"/>
+                        <rect key="frame" x="154" y="19.5" width="150" height="21"/>
+                        <accessibility key="accessibilityConfiguration" identifier="relatedCurrencyLabel"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="70" id="F4r-Ra-hWT"/>
+                            <constraint firstAttribute="width" constant="150" id="F4r-Ra-hWT"/>
                         </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
